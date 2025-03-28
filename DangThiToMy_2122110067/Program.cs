@@ -1,4 +1,11 @@
+using DangThiToMy_2122110067.Data;
+using Microsoft.EntityFrameworkCore;
+using DangThiToMy_2122110067.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 
@@ -23,3 +30,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
