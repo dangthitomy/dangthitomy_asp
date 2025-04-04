@@ -152,6 +152,8 @@ D:\ASP.NET\DangThiToMy_2122110067\DangThiToMy_2122110067\obj\Debug\net8.0\DangTh
 D:\ASP.NET\DangThiToMy_2122110067\DangThiToMy_2122110067\obj\Debug\net8.0\DangThiToMy_2122110067.csproj.CoreCompileInputs.cache
 D:\ASP.NET\DangThiToMy_2122110067\DangThiToMy_2122110067\obj\Debug\net8.0\DangThiToMy_2122110067.MvcApplicationPartsAssemblyInfo.cs
 D:\ASP.NET\DangThiToMy_2122110067\DangThiToMy_2122110067\obj\Debug\net8.0\DangThiToMy_2122110067.MvcApplicationPartsAssemblyInfo.cache
+D:\ASP.NET\DangThiToMy_2122110067\DangThiToMy_2122110067\obj\Debug\net8.0\DangThiToMy_2122110067.RazorAssemblyInfo.cache
+D:\ASP.NET\DangThiToMy_2122110067\DangThiToMy_2122110067\obj\Debug\net8.0\DangThiToMy_2122110067.RazorAssemblyInfo.cs
 D:\ASP.NET\DangThiToMy_2122110067\DangThiToMy_2122110067\obj\Debug\net8.0\DangThiToMy_2122110067.sourcelink.json
 D:\ASP.NET\DangThiToMy_2122110067\DangThiToMy_2122110067\obj\Debug\net8.0\staticwebassets.build.json
 D:\ASP.NET\DangThiToMy_2122110067\DangThiToMy_2122110067\obj\Debug\net8.0\staticwebassets.development.json

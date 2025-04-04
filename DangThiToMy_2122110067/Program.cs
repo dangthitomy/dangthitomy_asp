@@ -1,15 +1,21 @@
 using DangThiToMy_2122110067.Data;
+using DangThiToMy_2122110067.Service;
 using Microsoft.EntityFrameworkCore;
-using DangThiToMy_2122110067.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add services to the container.
+//
+builder.Services.AddScoped<DashboardService>();
 
-builder.Services.AddControllers();
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+
+//builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -25,10 +31,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
-
-
