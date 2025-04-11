@@ -1,14 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace DangThiToMy_2122110067.Model
+﻿namespace DangThiToMy_2122110067.Model
 {
     public class Category
     {
         public int Id { get; set; }
-
-        [Required(ErrorMessage = "Tên danh mục là bắt buộc")]
         public string Name { get; set; }
-
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public bool IsActive { get; set; } = true;

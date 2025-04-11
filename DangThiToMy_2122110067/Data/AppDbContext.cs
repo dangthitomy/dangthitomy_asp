@@ -1,5 +1,6 @@
-﻿using DangThiToMy_2122110067.Model;
+﻿
 using Microsoft.EntityFrameworkCore;
+using DangThiToMy_2122110067.Model;
 
 namespace DangThiToMy_2122110067.Data
 {

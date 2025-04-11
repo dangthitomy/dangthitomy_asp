@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DangThiToMy_2122110067.Model.Banner>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="text-primary">📢 Danh sách Banner</h2>
+        <a asp-controller="Dashboard" asp-action="Index" class="btn btn-secondary">← Quay về Dashboard</a>
+    </div>
+
+    <a asp-action="AddBanner" class="btn btn-success mb-3">+ Thêm mới</a>
+
+    <table class="table table-hover table-bordered shadow-sm">
+        <thead class="table-primary text-center">
+            <tr>
+                <th>ID</th>
+                <th>Tiêu đề</th>
+                <th>Hình ảnh</th>
+                <th>Link</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center">@item.Id</td>
+                    <td>@item.Title</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.ImageUrl))
+                        {
+                            <img src="@item.ImageUrl" alt="Banner" style="max-height: 50px;" />
+                        }
+                        else
+                        {
+                            <span class="text-muted">Không có hình</span>
+                        }
+                    </td>
+                    <td>
+                        <a href="@item.Link" target="_blank">@item.Link</a>
+                    </td>
+                    <td class="text-center">
+                        <a asp-action="EditBanner" asp-route-id="@item.Id" class="btn btn-sm btn-warning me-1">✏️ Sửa</a>
+                        <a asp-action="DeleteBanner" asp-route-id="@item.Id" class="btn btn-sm btn-danger">🗑️ Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

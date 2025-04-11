@@ -1,106 +1,13 @@
-﻿@using DangThiToMy_2122110067.Model
-@model DashboardViewModel
-
-<h2>Danh sách Dữ Liệu</h2>
-
-<h3>Banners</h3>
-<a href="@Url.Action("CreateBanner", "Dashboard")" class="btn btn-success mb-2">Thêm Banner</a>
-<table class="table table-bordered">
-    <thead class="thead-dark">
-        <tr>
-            <th>ID</th>
-            <th>Tiêu đề</th>
-            <th>Hành động</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Banners)
-        {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.Title</td>
-                <td>
-                    <a href="@Url.Action("Edit", "Dashboard", new { id = item.Id })" class="btn btn-primary btn-sm">Sửa</a>
-                    <a href="@Url.Action("Delete", "Dashboard", new { id = item.Id })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-<h3>Users</h3>
-<a href="@Url.Action("CreateUser", "Dashboard")" class="btn btn-success mb-2">Thêm User</a>
-<table class="table table-bordered">
-    <thead class="thead-dark">
-        <tr>
-            <th>ID</th>
-            <th>Tên người dùng</th>
-            <th>Hành động</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Users)
-        {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.Username</td>
-                <td>
-                    <a href="@Url.Action("Edit", "Dashboard", new { id = item.Id })" class="btn btn-primary btn-sm">Sửa</a>
-                    <a href="@Url.Action("Delete", "Dashboard", new { id = item.Id })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-<h3>Categories</h3>
-<a href="@Url.Action("CreateCategory", "Dashboard")" class="btn btn-success mb-2">Thêm Category</a>
-<table class="table table-bordered">
-    <thead class="thead-dark">
-        <tr>
-            <th>ID</th>
-            <th>Tên danh mục</th>
-            <th>Hành động</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Categories)
-        {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.Name</td>
-                <td>
-                    <a href="@Url.Action("Edit", "Dashboard", new { id = item.Id })" class="btn btn-primary btn-sm">Sửa</a>
-                    <a href="@Url.Action("Delete", "Dashboard", new { id = item.Id })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-<h3>Products</h3>
-<a href="@Url.Action("CreateProduct", "Dashboard")" class="btn btn-success mb-2">Thêm Product</a>
-<table class="table table-bordered">
-    <thead class="thead-dark">
-        <tr>
-            <th>ID</th>
-            <th>Tên sản phẩm</th>
-            <th>Giá</th>
-            <th>Hành động</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Products)
-        {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.Name</td>
-                <td>@item.Price</td>
-                <td>
-                    <a href="@Url.Action("Edit", "Dashboard", new { id = item.Id })" class="btn btn-primary btn-sm">Sửa</a>
-                    <a href="@Url.Action("Delete", "Dashboard", new { id = item.Id })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+﻿<div class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card border-primary shadow-lg" style="width: 100%; max-width: 500px;">
+        <div class="card-header bg-primary text-white text-center">
+            <h2 class="mb-0">Quản lý dữ liệu</h2>
+        </div>
+        <div class="card-body">
+            <a asp-controller="Dashboard" asp-action="BannerList" class="btn btn-outline-primary mb-3 w-100">📢 Banner</a>
+            <a asp-controller="Dashboard" asp-action="CategoryList" class="btn btn-outline-primary mb-3 w-100">📁 Category</a>
+            <a asp-controller="Dashboard" asp-action="ProductList" class="btn btn-outline-primary mb-3 w-100">🛒 Product</a>
+            <a asp-controller="Dashboard" asp-action="UserList" class="btn btn-outline-primary w-100">👤 User</a>
+        </div>
+    </div>
+</div>

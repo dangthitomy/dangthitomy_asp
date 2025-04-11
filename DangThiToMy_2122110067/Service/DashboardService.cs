@@ -1,6 +1,7 @@
 ﻿using DangThiToMy_2122110067.Data;
 using DangThiToMy_2122110067.Model;
 
+
 namespace DangThiToMy_2122110067.Service
 {
     public class DashboardService
@@ -26,24 +27,11 @@ namespace DangThiToMy_2122110067.Service
         {
             return _context.Categories.ToList();
         }
-        public void AddCategory(Category category)
-        {
-            // Kiểm tra nếu Description bị NULL thì gán giá trị mặc định
-            if (string.IsNullOrEmpty(category.Description))
-            {
-                category.Description = "Không có mô tả"; // Hoặc giá trị mặc định khác
-            }
-
-            _context.Categories.Add(category);
-            _context.SaveChanges();
-        }
-
-
 
         public List<Product> GetProducts()
         {
             return _context.Products.ToList();
         }
-
     }
+
 }

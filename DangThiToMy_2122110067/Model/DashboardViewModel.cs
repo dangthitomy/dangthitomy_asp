@@ -1,4 +1,7 @@
-﻿namespace DangThiToMy_2122110067.Model
+﻿using DangThiToMy_2122110067.Model;
+using DangThiToMy_2122110067.Model;
+
+namespace DangThiToMy_2122110067.Models
 {
     public class DashboardViewModel
     {

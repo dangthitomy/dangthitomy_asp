@@ -1,0 +1,32 @@
+﻿@model DangThiToMy_2122110067.Model.Product
+
+@{
+    ViewData["Title"] = "Sửa";
+    ViewData["Action"] = "EditProduct";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="text-warning mb-0">✏️ Sửa Sản phẩm</h2>
+        <a asp-action="ProductList" class="btn btn-outline-secondary">← Quay về danh sách</a>
+    </div>
+
+    <form asp-action="@ViewData["Action"]" method="post">
+        <div class="form-group mb-3">
+            <label for="Name">Tên sản phẩm</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Image">Link ảnh</label>
+            <input asp-for="Image" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Price">Giá</label>
+            <input asp-for="Price" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-success">💾 Lưu thay đổi</button>
+    </form>
+</div>

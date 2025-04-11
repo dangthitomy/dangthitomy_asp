@@ -1,0 +1,47 @@
+﻿@model DangThiToMy_2122110067.Model.User
+
+@{
+    ViewData["Title"] = "Sửa";
+    ViewData["Action"] = "EditUser";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="text-warning mb-0">✏️ Sửa Người dùng</h2>
+        <a asp-action="UserList" class="btn btn-outline-secondary">← Quay về danh sách</a>
+    </div>
+
+    <form asp-action="@ViewData["Action"]" method="post">
+        <div class="form-group mb-3">
+            <label for="Username">Tên người dùng</label>
+            <input asp-for="Username" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Image">Link ảnh</label>
+            <input asp-for="Image" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Password">Mật khẩu</label>
+            <input asp-for="Password" type="password" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Email">Email</label>
+            <input asp-for="Email" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Phone">Điện thoại</label>
+            <input asp-for="Phone" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Address">Địa chỉ</label>
+            <input asp-for="Address" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-success">💾 Lưu thay đổi</button>
+    </form>
+</div>
