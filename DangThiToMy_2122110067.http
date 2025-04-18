@@ -1,0 +1,6 @@
+@DangThiToMy_2122110067_HostAddress = http://localhost:5008
+
+GET {{DangThiToMy_2122110067_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
